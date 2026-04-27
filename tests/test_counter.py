@@ -15,10 +15,11 @@ class TestCounter(unittest.TestCase):
 
     def test_python_counting(self):
         stats = count_lines(self.py_file, '.py')
-        self.assertEqual(stats.total_lines, 5)
+        self.assertEqual(stats.total_lines, 4)
         self.assertEqual(stats.blank_lines, 1)
         self.assertEqual(stats.comment_lines, 1)
-        self.assertEqual(stats.code_lines, 3)
+        self.assertEqual(stats.code_lines, 2)
+        self.assertEqual(stats.methods, 1)
 
 if __name__ == '__main__':
     unittest.main()
